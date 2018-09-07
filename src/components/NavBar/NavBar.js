@@ -2,27 +2,12 @@ import React from "react";
 import "./NavBar.css";
 
 const CharaterCard = props => (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">Navbar w/ text</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarText">
-            <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
-                    <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Features</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Pricing</a>
-                </li>
-            </ul>
-            <span className="navbar-text">
-                Navbar text with an inline element
-    </span>
+    <div className="jumbotron jumbotron-fluid">
+        <div className="container">
+            <h1 className="display-4">DBZ Matching Game</h1>
+            <p className="lead">Try to click on all of the character without clicking on one twice.</p>
+            <p className="lead text-center">Total clicked: {props.correct}</p>
         </div>
-    </nav>
+    </div>
 );
 export default CharaterCard;
