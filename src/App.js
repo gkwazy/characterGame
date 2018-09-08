@@ -13,11 +13,16 @@ class App extends Component {
     character
   };
 
-  characterClicked = (id) => {
+  characterClicked = (idWanted) => {
     const { totalCorrect, character } = this.state;
-    let card = this.state.character.filter(character => character.key === id)[0];
-    character[card].clicked = true;
-    console.log("it worked " + card[0].name);
+    let card = this.state.character;
+    for (let i = 0; i < card.length; i++) {
+      console.log("card id: " + idWanted + " and " + "card: " + card)
+      if (idWanted === card[i].id) {
+        card[i].clicked = true;
+        console.log("te clicked was changed " + card[i].clicked)
+      }
+    };
     this.setState({ totalCorrect: totalCorrect + 1, character })
   };
 
