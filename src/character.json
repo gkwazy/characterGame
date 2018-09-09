@@ -16,5 +16,23 @@
         "name": "gohan",
         "image": "./picCard/gohan.gif",
         "clicked": false
+    },
+    {
+        "id": 3,
+        "name": "krillin",
+        "image": "./picCard/krillin.gif",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "name": "piccolo",
+        "image": "./picCard/piccolo.gif",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "cell",
+        "image": "./picCard/cell.gif",
+        "clicked": false
     }
 ]
