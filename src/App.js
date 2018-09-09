@@ -4,8 +4,9 @@ import NavBar from "./components/NavBar";
 import character from "./character.json";
 import CharacterCard from "./components/CharacterCard";
 import './App.css';
-
-
+import { Container, Row, Col } from "./components/Grid";
+let rowNum = 0;
+let colNum = 0;
 
 class App extends Component {
   state = {
@@ -28,19 +29,22 @@ class App extends Component {
 
   render() {
     return (
-      <Wrapper>
+      <Container>
         <NavBar correct={this.state.totalCorrect} />
-        {this.state.character.map(character => (
-          <CharacterCard
-            characterClicked={this.characterClicked}
-            id={character.id}
-            key={character.id}
-            name={character.name}
-            image={character.image}
-            clicked={character.clicked}
-          />
-        ))}
-      </Wrapper>
+        <Wrapper>
+          {this.state.character.map(character => (
+            <CharacterCard
+              characterClicked={this.characterClicked}
+              id={character.id}
+              key={character.id}
+              name={character.name}
+              image={character.image}
+              clicked={character.clicked}
+            />
+
+          ))}
+        </Wrapper>
+      </Container>
     );
   }
 }
