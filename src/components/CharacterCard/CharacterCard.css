@@ -1,5 +1,6 @@
 .cardBox{
     width: 30%;
     float: left;
-    margin: 10px;
+    margin: .5%;
+    height: 30%;
 }
