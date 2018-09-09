@@ -5,25 +5,45 @@ import character from "./character.json";
 import CharacterCard from "./components/CharacterCard";
 import './App.css';
 import { Container, Row, Col } from "./components/Grid";
-let rowNum = 0;
-let colNum = 0;
+import Footer from "./components/Footer";
+
 
 class App extends Component {
   state = {
     totalCorrect: 0,
     character
   };
+  shuffle = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
+  gameOver() {
+    alert("Sorry Mate, you done clicked the same fighter twice. please try again");
+    for (let i = 0; i < character.length; i++) {
+      character[i].clicked = false;
+    }
+  };
 
   characterClicked = (idWanted) => {
     const { totalCorrect, character } = this.state;
     let card = this.state.character;
+
     for (let i = 0; i < card.length; i++) {
-      console.log("card id: " + idWanted + " and " + "card: " + card)
       if (idWanted === card[i].id) {
-        card[i].clicked = true;
-        console.log("te clicked was changed " + card[i].clicked)
+        if (card[i].clicked === true) {
+          console.log("this")
+          this.gameOver();
+        } else {
+          console.log("that")
+          card[i].clicked = true;
+        }
       }
     };
+    this.shuffle(character);
     this.setState({ totalCorrect: totalCorrect + 1, character })
   };
 
@@ -44,6 +64,7 @@ class App extends Component {
 
           ))}
         </Wrapper>
+        <Footer></Footer>
       </Container>
     );
   }
