@@ -1,5 +1,12 @@
 .cardBox{
-    width: 32%;
+    width: 30%;
    margin: .5%;
-   
+}
+.cardBox:hover{
+    margin:0;
+    width:33%;
+    outline-color:red;
+    outline-style: solid;
+    
+
 }

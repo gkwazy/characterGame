@@ -1,4 +1,8 @@
-.jumbotron{
+.navbar{
     width: 100%;
+    color:white;
+    font-family: 'Bitter', serif;
+   margin-bottom:0;
+   background-color:#3F4FFB
     
 }

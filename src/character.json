@@ -34,5 +34,41 @@
         "name": "cell",
         "image": "./picCard/cell.gif",
         "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "trunks",
+        "image": "./picCard/trunks.gif",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "bulma",
+        "image": "./picCard/bulma.gif",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "roshi",
+        "image": "./picCard/roshi.gif",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "freeze",
+        "image": "./picCard/freeze.gif",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "name": "buu",
+        "image": "./picCard/buu.gif",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "shenron",
+        "image": "./picCard/shenron.gif",
+        "clicked": false
     }
 ]

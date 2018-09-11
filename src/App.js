@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 import character from "./character.json";
 import CharacterCard from "./components/CharacterCard";
 import './App.css';
-import { Container, Row, Col } from "./components/Grid";
+import Directions from "./components/Directions";
 import Footer from "./components/Footer";
 
 
@@ -22,10 +22,13 @@ class App extends Component {
   };
 
   gameOver() {
+    let { totalCorrect } = this.state;
     alert("Sorry Mate, you done clicked the same fighter twice. please try again");
     for (let i = 0; i < character.length; i++) {
       character[i].clicked = false;
     }
+    totalCorrect = 0;
+    this.setState({ totalCorrect: 0, });
   };
 
   characterClicked = (idWanted) => {
@@ -35,22 +38,22 @@ class App extends Component {
     for (let i = 0; i < card.length; i++) {
       if (idWanted === card[i].id) {
         if (card[i].clicked === true) {
-          console.log("this")
           this.gameOver();
         } else {
-          console.log("that")
           card[i].clicked = true;
+          this.setState({ totalCorrect: totalCorrect + 1, character })
         }
       }
     };
     this.shuffle(character);
-    this.setState({ totalCorrect: totalCorrect + 1, character })
+
   };
 
   render() {
     return (
-      <Container>
+      <div>
         <NavBar correct={this.state.totalCorrect} />
+        <Directions />
         <Wrapper>
           {this.state.character.map(character => (
             <CharacterCard
@@ -65,7 +68,7 @@ class App extends Component {
           ))}
         </Wrapper>
         <Footer></Footer>
-      </Container>
+      </div>
     );
   }
 }

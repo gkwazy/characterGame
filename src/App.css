@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: url("https://ae01.alicdn.com/kf/HTB1JNMdRFXXXXciaXXXq6xXFXXXj/shenron-dragon-ball-z-goku-towel-adults-kids-home-decal-fitness-beach-towels-children-bath-towel.jpg_640x640.jpg")
 }
 
 .App-logo {
@@ -26,4 +27,5 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
 

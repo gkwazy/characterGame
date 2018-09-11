@@ -2,12 +2,12 @@ import React from "react";
 import "./NavBar.css";
 
 const CharaterCard = props => (
-    <div className="jumbotron jumbotron-fluid">
+    <nav className="navbar navbar-dark ">
         <div className="container">
-            <h1 className="display-4 text-center">DBZ Matching Game</h1>
-            <p className="lead text-center">Try to click on all of the character without clicking on one twice.</p>
-            <p className="lead text-center">Total clicked: {props.correct}</p>
+            <h1 className="text-center">DBZ Matching Game</h1>
+
+            <h1 className="text-center">Total clicked: {props.correct}</h1>
         </div>
-    </div>
+    </nav>
 );
 export default CharaterCard;
